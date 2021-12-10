@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100%;
+  background-color: #000;
+}
+
+header {
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 1em;
+  z-index: 999;
+}
+
+header figure {
+  width: clamp(8em, 150px, 12em);
+  /* border: 2px solid tomato; */
+}
+
+header > figure img {
+  display: block;
+  width: 100%;
+}
+
+header button {
+  width: 3em;
+  line-height: 0;
+  background-color: transparent;
+  border: none;
+}
+
+main {
+  position: relative;
+  margin-top: 5em;
+}
+
+#songs {
+    height: 85vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1em;
+  /* border: 2px dashed white; */
+}
+
+#songs > article {
+  background-color: var(--boxColor);
+  height: 100%;
+  flex-basis: calc(100% / 3.3);
+  transition: flex 1s ease-in-out;
+  position: relative;
+}
+
+#songs article > * {
+  position: absolute;
+  margin: 1em;
+}
+
+#songs > article h1 {
+  top: 0;
+  left: 0;
+  text-transform: capitalize;
+}
+
+#songs > article button {
+  border: none;
+  background-color: transparent;
+  text-transform: capitalize;
+  outline-offset: 1em;
+  bottom: 0;
+  left: 0;
+}
+
+#songs > article figure {
+  width: 20px;
+  bottom: 0;
+  right: 0;
+}
+
+#songs > article:hover {
+  flex: 100%;
+}
+
+#songs > article:nth-of-type(1) {
+  --boxColor: red;
+  margin: 0;
+}
+
+#songs > article:nth-of-type(2) {
+  --boxColor: yellow;
+  margin: 0 2em;
+}
+
+#songs > article:nth-of-type(3) {
+  --boxColor: blue;
+  margin: 0;
+}
+
+@media (max-width: 80em) {
+  #songs {
+    flex-direction: column-reverse;
+  }
+
+  #songs > article:nth-last-of-type(1) {
+    --boxColor: red;
+  }
+
+  #songs > article:nth-last-of-type(2) {
+    --boxColor: yellow;
+    margin: 2em 0;
+  }
+
+  #songs > article:nth-last-of-type(3) {
+    --boxColor: blue;
+  }
+}
