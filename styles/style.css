@@ -172,11 +172,11 @@ main {
   z-index: 1;
 }
 .carousel button:first-of-type {
-  cursor: url("/images/left-arrow.svg"), pointer;
+  cursor: url("../images/left-arrow.svg"), pointer;
   left: var(--offset);
 }
 .carousel button:last-of-type {
-  cursor: url("/images/right-arrow.svg"), pointer;
+  cursor: url("../images/right-arrow.svg"), pointer;
   right: var(--offset);
 }
 
