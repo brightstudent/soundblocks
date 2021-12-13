@@ -157,6 +157,7 @@ main {
   object-fit: cover;
   width: 100%;
   position: relative;
+  z-index: 0;
 }
 
 .carousel button {
@@ -168,6 +169,7 @@ main {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 1;
 }
 .carousel button:first-of-type {
   cursor: url("/images/left-arrow.svg"), pointer;
